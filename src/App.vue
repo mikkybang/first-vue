@@ -31,14 +31,15 @@ export default {
       this.todos = this.todos.filter(todo => todo.id !== id);
     },
     addTodo(newTodo) {
+      
       this.todos = [...this.todos, newTodo];
-    },
-    created() {
-      axios
-        .get("https://jsonplaceholder.typicode.com/todos")
-        .then(res => (this.todos = res.data))
-        .catch(err => console.log(err));
     }
+  },
+  created() {
+    axios
+      .get("https://jsonplaceholder.typicode.com/todos?_limit=5")
+      .then(res => (this.todos = res.data))
+      .catch(err => console.log(err));
   }
 };
 </script>
