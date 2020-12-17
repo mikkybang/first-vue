@@ -57,4 +57,17 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: #555;
+  color: #fff;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #666;
+}
 </style>
